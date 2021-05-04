@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CustomDDDExtensions\OpsDDDExtensions.csproj" />
+    <ProjectReference Include="..\OpsDDDExtensions\OpsDDDExtensions.csproj" />
   </ItemGroup>
 
 </Project>
