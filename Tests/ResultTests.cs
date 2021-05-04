@@ -8,9 +8,9 @@ namespace OpsDDDExtensions.Tests
         [Fact]
         public void Result_returns_fail()
         {
-            var person = Person.Create(null, "abc");
-            Assert.True(person.IsError);
-            Assert.Equal("invalid name", person.Error.Message);
+            var result = FullName.Create(null, "Test");
+            Assert.True(result.IsError);
+            Assert.Equal("invalid name", result.Error.Message);
         }
     }
 }

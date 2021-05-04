@@ -9,10 +9,14 @@
     <Copyright>Krzysztof Papciak</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <NeutralLanguage>en</NeutralLanguage>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="ReflectionMagic" Version="4.1.0" />
+    <PackageReference Include="Ulid" Version="1.2.6" />
   </ItemGroup>
 
 </Project>

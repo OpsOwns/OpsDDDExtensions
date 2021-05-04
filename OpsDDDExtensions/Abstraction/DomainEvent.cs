@@ -3,6 +3,9 @@ using System;
 
 namespace OpsDDDExtensions.Abstraction
 {
+    /// <summary>
+    /// Base domain event class
+    /// </summary>
     public abstract class DomainEvent : IDomainEvent
     {
         public Guid AggregateId { get; }

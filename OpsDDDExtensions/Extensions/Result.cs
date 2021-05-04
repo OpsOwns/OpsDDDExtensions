@@ -2,6 +2,10 @@
 
 namespace OpsDDDExtensions.Extensions
 {
+    /// <summary>
+    /// Result class
+    /// </summary>
+    /// <typeparam name="TBody">Body of object</typeparam>
     public class Result<TBody>
     {
         public Error Error { get; }

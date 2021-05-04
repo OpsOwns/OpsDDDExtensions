@@ -4,6 +4,9 @@ using System.Linq;
 
 namespace OpsDDDExtensions.Abstraction
 {
+    /// <summary>
+    /// Base value object class
+    /// </summary>
     public abstract class ValueObject : IComparable, IComparable<ValueObject>
     {
         protected abstract IEnumerable<object> GetEqualityComponents();
@@ -28,7 +31,7 @@ namespace OpsDDDExtensions.Abstraction
             return components.Select((value, indexer) => CompareComponents(value, otherComponents[indexer]))
                 .FirstOrDefault(comparison => comparison != 0);
         }
-        protected virtual int CompareComponents(object value1, object value2) =>
+        private int CompareComponents(object value1, object value2) =>
             value1 is null && value2 is null
                 ? 0
                 : value1 is null
@@ -45,29 +48,11 @@ namespace OpsDDDExtensions.Abstraction
                 return current * 23 + (obj?.GetHashCode() ?? 0);
             }
         });
-        public static bool operator ==(ValueObject left, ValueObject right)
-        {
-            return left?.Equals(right) ?? ReferenceEquals(right, null);
-        }
-        public static bool operator !=(ValueObject left, ValueObject right)
-        {
-            return !(left == right);
-        }
-        public static bool operator <(ValueObject left, ValueObject right)
-        {
-            return left is null ? right is not null : left.CompareTo(right) < 0;
-        }
-        public static bool operator <=(ValueObject left, ValueObject right)
-        {
-            return !(left is not null && left.CompareTo(right) > 0);
-        }
-        public static bool operator >(ValueObject left, ValueObject right)
-        {
-            return !(left is null || left.CompareTo(right) <= 0);
-        }
-        public static bool operator >=(ValueObject left, ValueObject right)
-        {
-            return left is null ? right is null : left.CompareTo(right) >= 0;
-        }
+        public static bool operator ==(ValueObject left, ValueObject right) => left?.Equals(right) ?? ReferenceEquals(right, null);
+        public static bool operator !=(ValueObject left, ValueObject right) => !(left == right);
+        public static bool operator <(ValueObject left, ValueObject right) => left is null ? right is not null : left.CompareTo(right) < 0;
+        public static bool operator <=(ValueObject left, ValueObject right) => !(left is not null && left.CompareTo(right) > 0);
+        public static bool operator >(ValueObject left, ValueObject right) => !(left is null || left.CompareTo(right) <= 0);
+        public static bool operator >=(ValueObject left, ValueObject right) => left is null ? right is null : left.CompareTo(right) >= 0;
     }
 }
