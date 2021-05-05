@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OpsDDDExtensions.Abstraction
+namespace OpsDDDExtensions.Abstraction.DDD
 {
     /// <summary>
     /// Base value object class

@@ -1,5 +1,5 @@
-﻿using OpsDDDExtensions.Abstraction;
-using OpsDDDExtensions.Abstraction.Identity;
+﻿using OpsDDDExtensions.Abstraction.DDD;
+using OpsDDDExtensions.Abstraction.DDD.Identity;
 using OpsDDDExtensions.Extensions;
 using System.Collections.Generic;
 
@@ -10,6 +10,27 @@ namespace OpsDDDExtensions.Tests.FakeData
         public FullName FullName { get; set; }
         public Person(IdentityGuid id) : base(id)
         {
+        }
+    }
+    public class AgeGen : ValueObject
+    {
+        public int Age { get; set; }
+
+        private AgeGen(int age)
+        {
+            Age = age;
+        }
+
+        public static Result<AgeGen> Create(int age)
+        {
+            if (age < 30)
+                return Result.Fail<AgeGen>("invalid age");
+            return Result.Ok(new AgeGen(age));
+        }
+
+        protected override IEnumerable<object> GetEqualityComponents()
+        {
+            yield return Age;
         }
     }
     public class FullName : ValueObject
@@ -26,8 +47,8 @@ namespace OpsDDDExtensions.Tests.FakeData
         public static Result<FullName> Create(string name, string sureName)
         {
             if (name is null)
-                return Result<FullName>.Fail("invalid name");
-            return Result<FullName>.Success(new (name, sureName));
+                return Result.Fail<FullName>("invalid name");
+            return Result.Ok(new FullName(name, sureName));
         }
 
         protected override IEnumerable<object> GetEqualityComponents()

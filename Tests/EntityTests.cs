@@ -1,4 +1,4 @@
-﻿using OpsDDDExtensions.Abstraction.Identity;
+﻿using OpsDDDExtensions.Abstraction.DDD.Identity;
 using OpsDDDExtensions.Tests.FakeData;
 using System;
 using Xunit;

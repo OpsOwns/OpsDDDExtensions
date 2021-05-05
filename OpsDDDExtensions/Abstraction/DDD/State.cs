@@ -1,4 +1,4 @@
-﻿namespace OpsDDDExtensions.Abstraction
+﻿namespace OpsDDDExtensions.Abstraction.DDD
 {
     /// <summary>
     /// State of Aggregate

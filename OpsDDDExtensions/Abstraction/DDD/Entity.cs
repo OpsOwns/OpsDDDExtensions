@@ -1,7 +1,7 @@
-﻿using OpsDDDExtensions.Abstraction.Identity;
+﻿using OpsDDDExtensions.Abstraction.DDD.Identity;
 using OpsDDDExtensions.Interfaces;
 
-namespace OpsDDDExtensions.Abstraction
+namespace OpsDDDExtensions.Abstraction.DDD
 {
     /// <summary>
     /// Base entity class with id as guid

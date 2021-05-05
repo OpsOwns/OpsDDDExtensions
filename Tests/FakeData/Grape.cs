@@ -1,5 +1,5 @@
-﻿using OpsDDDExtensions.Abstraction;
-using OpsDDDExtensions.Abstraction.Identity;
+﻿using OpsDDDExtensions.Abstraction.DDD;
+using OpsDDDExtensions.Abstraction.DDD.Identity;
 using System;
 
 namespace OpsDDDExtensions.Tests.FakeData

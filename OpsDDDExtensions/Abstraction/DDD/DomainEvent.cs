@@ -1,7 +1,7 @@
-﻿using OpsDDDExtensions.Interfaces;
-using System;
+﻿using System;
+using OpsDDDExtensions.Interfaces;
 
-namespace OpsDDDExtensions.Abstraction
+namespace OpsDDDExtensions.Abstraction.DDD
 {
     /// <summary>
     /// Base domain event class

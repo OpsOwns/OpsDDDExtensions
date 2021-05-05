@@ -6,12 +6,12 @@
     <PackageProjectUrl>https://github.com/OpsOwns/OpsDDDExtensions.git</PackageProjectUrl>
     <RepositoryUrl>https://github.com/OpsOwns/OpsDDDExtensions.git</RepositoryUrl>
     <PackageTags>DDD, Extensions</PackageTags>
-    <Copyright>Krzysztof Papciak</Copyright>
+    <Copyright></Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <NeutralLanguage>en</NeutralLanguage>
-    <AssemblyVersion>1.0.0.1</AssemblyVersion>
-    <FileVersion>1.0.0.1</FileVersion>
-    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <FileVersion>1.0.0.2</FileVersion>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>

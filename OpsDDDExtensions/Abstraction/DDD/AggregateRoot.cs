@@ -1,10 +1,10 @@
-﻿using OpsDDDExtensions.Abstraction.Identity;
+﻿using OpsDDDExtensions.Abstraction.DDD.Identity;
 using OpsDDDExtensions.Interfaces;
 using ReflectionMagic;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OpsDDDExtensions.Abstraction
+namespace OpsDDDExtensions.Abstraction.DDD
 {
     /// <summary>
     /// Base AggregateRoot class where Id is Guid Class
@@ -19,7 +19,7 @@ namespace OpsDDDExtensions.Abstraction
     /// Base AggregateRoot class where Id is custom
     /// </summary>
     /// <typeparam name="TId">Type of identity</typeparam>
-    public abstract class AggregateRoot<TId> : Entity<TId> where  TId : IIdentity
+    public abstract class AggregateRoot<TId> : Entity<TId> where TId : IIdentity
     {
         public int Version { get; protected set; }
         private State State { get; set; } = State.Created;

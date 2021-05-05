@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OpsDDDExtensions.Abstraction.Identity
+namespace OpsDDDExtensions.Abstraction.DDD.Identity
 {
     /// <summary>
     /// Default Identity class as ulid
